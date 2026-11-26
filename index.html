@@ -8,16 +8,16 @@
   <meta name="theme-color" content="#1B2A47">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231B2A47'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff'%3EUO%3C/text%3E%3C/svg%3E">
 
-  <!-- Vista previa al compartir. Si la web se publica en otra dirección, cambiar estas dos URL. -->
+  <!-- Vista previa al compartir. Si cambia el dominio (archivo CNAME), actualizar estas tres URL. -->
+  <link rel="canonical" href="https://cvuzielorozco.plexiweb.app/">
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="es_AR">
   <meta property="og:title" content="Uziel Orozco | Administración y Control de Gestión">
   <meta property="og:description" content="CV online: control de gestión, compras, comercio exterior y logística.">
-  <meta property="og:url" content="https://uziel44.github.io/CVUzielorozco/">
-  <meta property="og:image" content="https://uziel44.github.io/CVUzielorozco/img/foto.jpg">
+  <meta property="og:url" content="https://cvuzielorozco.plexiweb.app/">
+  <meta property="og:image" content="https://cvuzielorozco.plexiweb.app/img/foto.jpg">
   <meta name="twitter:card" content="summary">
 
-  <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap">
@@ -55,8 +55,8 @@
         <li><a href="https://www.linkedin.com/in/uzielorozco/">in/uzielorozco</a></li>
         <li>Villa Carlos Paz, Córdoba</li>
       </ul>
-      <button type="button" class="boton" id="pdf">Descargar PDF</button>
-      <p class="ayuda">En la ventana de impresión, elegí «Guardar como PDF».</p>
+      <!-- Para actualizar el CV descargable: reemplazar este PDF conservando el mismo nombre. -->
+      <a class="boton" id="pdf" href="CV_Uziel_Orozco.pdf" download>Descargar PDF</a>
     </div>
   </header>
 
@@ -89,9 +89,10 @@
         <ul>
           <li><strong>Consultoría de gestión:</strong> desarrollo del área de administración y ventas B2B de <a href="https://electrotest.com.ar/">Electro Test</a> (Catamarca).</li>
           <li><strong>Observatorio:</strong> propuesta de observatorio estadístico de la demanda a ASHOGA asociación hotelera de Villa Carlos Paz para mejorar la toma de decisiones de hoteles con tableros de control (en curso). Observatorio estadístico para Cámara de Productores Ovinos de Córdoba.</li>
-          <li><strong>Desarrollo web:</strong> sitios, e-commerce y software de gestión para pymes; aplicación de IA en automatización de procesos; SEO y análisis de datos para visualizar en dashboard integrado en cada web que entregamos.</li>
+          <li><strong>Desarrollo web:</strong> sitios, e-commerce y software de gestión para pymes; aplicación de IA en automatización de procesos; SEO y análisis de datos para visualizar en dashboard integrado en cada web que entregamos. <button type="button" class="enlace" popovertarget="webs">Ver listado de webs</button></li>
           <li>Desarrollo de un pipeline ETL con Python: análisis de precios de 70 proveedores y transformación de datos para un distribuidor mayorista de alimentos en Punilla.</li>
         </ul>
+        <button type="button" class="enlace mas" popovertarget="job-plexiweb">Más sobre este trabajo</button>
       </article>
 
       <article class="puesto">
@@ -103,8 +104,9 @@
         <ul>
           <li>Diseñé e implementé la profesionalización administrativa: ordené primero la contabilidad interna y ventas, con procesos documentados para una mejora en la toma de decisiones.</li>
           <li>Desarrollé el análisis de costos, presupuestos y seguimiento de estados contables, con indicadores para medir el cumplimiento de objetivos; uso de IA para documentación y planificación.</li>
-          <li>Creé <a href="https://www.instagram.com/lugareando_viajesyturismo/">Lugareando</a>, agencia de viajes como unidad de negocio para promocionar el hotel, verticalizar la operación y vender a otras agencias; base de agencias de la región centro con web scraping.</li>
+          <li>Creé <a href="https://www.instagram.com/lugareando_viajesyturismo/">Lugareando</a>, agencia de viajes como unidad de negocio para promocionar el hotel, verticalizar la operación y vender a otras agencias; base de agencias de la región centro con web scraping. <button type="button" class="enlace" popovertarget="proyecto-lugareando">Ver el proyecto Lugareando</button></li>
         </ul>
+        <button type="button" class="enlace mas" popovertarget="job-hotel-italia">Más sobre este trabajo</button>
       </article>
 
       <article class="puesto">
@@ -119,6 +121,7 @@
           <li>Ejecuté cada operación de exportación: control de documentación para el despacho aduanero y análisis y contratación del operador logístico internacional.</li>
           <li>Organicé administrativamente la operación argentina (Valorkarg SAS, también para venta mayorista en mercado interno) y formalicé un registro y método de trabajo para cada operación.</li>
         </ul>
+        <button type="button" class="enlace mas" popovertarget="job-valork">Más sobre este trabajo</button>
       </article>
 
       <article class="puesto">
@@ -130,6 +133,7 @@
         <ul>
           <li>Representante comercial de una única bodega de Mendoza: desarrollé una cartera de vinotecas en Córdoba para venta mayorista.</li>
         </ul>
+        <button type="button" class="enlace mas" popovertarget="job-vinos">Más sobre este trabajo</button>
       </article>
 
       <article class="puesto">
@@ -142,6 +146,7 @@
           <li>Asesoré a empresas, principalmente del sector alimenticio, para mejorar la eficiencia de mantenimiento preventivo: aplicación de indicadores y una app para la toma de datos de rutinas.</li>
           <li>Comercialicé centrales de lubricación automática y lubricantes de aplicación especial (grado alimenticio, condiciones extremas).</li>
         </ul>
+        <button type="button" class="enlace mas" popovertarget="job-hyflon">Más sobre este trabajo</button>
       </article>
 
       <article class="puesto">
@@ -227,8 +232,139 @@
 
 </div>
 
-<script>
-  document.getElementById('pdf').addEventListener('click', function () { window.print(); });
-</script>
+<!-- Listado tomado del portfolio de web.plexi.com.ar. Para sumar un sitio, agregar otro <li>. -->
+<dialog class="popup" id="webs" popover aria-labelledby="t-webs">
+  <div class="popup-cabecera">
+    <h2 id="t-webs">Webs realizadas y en curso</h2>
+    <button type="button" class="cerrar" popovertarget="webs" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <ul>
+    <li><a href="https://electrotest.com.ar/" target="_blank" rel="noopener">Electrotest</a> Mantenimiento eléctrico de alta tensión</li>
+    <li><a href="https://ilhagrandeaventura.plexiweb.app/" target="_blank" rel="noopener">Ilha Grande</a> Ecoturismo aventura</li>
+    <li><a href="https://rincondenina.plexi.com.ar/" target="_blank" rel="noopener">Rincón de Nina</a> Alojamiento en Tanti, Córdoba</li>
+    <li><a href="https://usados.plexi.com.ar/" target="_blank" rel="noopener">Venta Usados Hernán</a> Venta de usados</li>
+    <li><a href="https://anamariaflowers.com/" target="_blank" rel="noopener">Ana Maria Flowers</a> Florería y arreglos florales</li>
+    <li><a href="https://clubandinovcp.plexiweb.app/" target="_blank" rel="noopener">Club Andino VCP</a> Club de escalada y trekking</li>
+    <li><a href="https://gestion.plexi.com.ar/" target="_blank" rel="noopener">Plexi Gestión</a> Asesoramiento de administración</li>
+    <li><a href="https://herreriaolmedo.plexi.com.ar/" target="_blank" rel="noopener">Herrería Olmedo</a> Herrería y trabajos en metal</li>
+    <li><a href="https://miyendj.plexiweb.app/" target="_blank" rel="noopener">Miyen DJ</a> Entretenimiento y shows</li>
+    <li><a href="https://verdeaguabebes.plexi.com.ar/" target="_blank" rel="noopener">Verdeagua Bebés</a> Artículos para bebés</li>
+    <li><a href="https://uziel44.github.io/datovivo/" target="_blank" rel="noopener">Datovivo</a> Blog de análisis estadísticos</li>
+    <li><a href="https://vetpeirone.plexi.com.ar/" target="_blank" rel="noopener">Veterinaria Dr. Peirone</a> Veterinaria en General Deheza</li>
+    <li><a href="https://septimo.raabta7.org/" target="_blank" rel="noopener">Marco Antonio Séptimo</a> Perfil profesional de escritor</li>
+    <li><a href="https://verax-duediligence.pages.dev/" target="_blank" rel="noopener">Verax Due Diligence</a> Investigación y due diligence</li>
+    <li><a href="https://uziel44.github.io/betty/" target="_blank" rel="noopener">Betty Tejidos</a> Tejidos artesanales en telar</li>
+  </ul>
+</dialog>
+
+<!-- Detalle de cada trabajo (botón "Más sobre este trabajo") -->
+<dialog class="popup" id="job-plexiweb" popover aria-labelledby="t-plexiweb">
+  <div class="popup-cabecera">
+    <h2 id="t-plexiweb">PlexiWeb: el mismo método, desde la web</h2>
+    <button type="button" class="cerrar" popovertarget="job-plexiweb" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <div class="popup-texto">
+    <p class="periodo">Junio 2026 – Actualidad</p>
+    <p>Con la misma lógica que apliqué en Hotel Italia seguí trabajando: primero el registro documental como base, después la medición con indicadores y, con eso, el cumplimiento de objetivos.</p>
+    <p>Es un servicio que requiere construir confianza con cada cliente. Para hacerlo visible, busqué armar sitios web y, desde ese punto, mejorar las ventas por e-commerce de cada cliente.</p>
+  </div>
+</dialog>
+
+<dialog class="popup" id="job-hotel-italia" popover aria-labelledby="t-hotel-italia">
+  <div class="popup-cabecera">
+    <h2 id="t-hotel-italia">Hotel Italia: ordenar la operación</h2>
+    <button type="button" class="cerrar" popovertarget="job-hotel-italia" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <div class="popup-texto">
+    <p class="periodo">Agosto 2024 – Junio 2025</p>
+    <p>Fue mi primer cliente como consultor independiente. Empecé con una auditoría de la dirección y de cada área, para documentar los procesos clave y poder decidir con datos.</p>
+
+    <h3>El plan que propuse</h3>
+    <ol>
+      <li>Registrar las actividades diarias de cada área y puesto, para medir y comparar procesos.</li>
+      <li>Analizar costos y recursos de cada unidad de negocio.</li>
+      <li>Con esos datos, trabajar el proceso de ventas y sus oportunidades de crecimiento.</li>
+    </ol>
+
+    <h3>Ventas y reservas</h3>
+    <p>Armé las herramientas del área de ventas: análisis de clientes y de producto, base de datos de clientes, registro de reservas y de ocupación, análisis de reservas para previsión y una campaña de encuestas.</p>
+
+    <h3>Lugareando</h3>
+    <p>Me convocaron para crear una agencia de viajes que impulsara las ventas del hotel y, como segundo objetivo, vendiera excursiones por las sierras de Córdoba. Armé una base de más de 1.000 agencias y las contacté por WhatsApp y por teléfono, con seguimiento diario y mejora continua del mensaje.</p>
+
+    <h3>Administración contable</h3>
+    <p>Digitalizamos los asientos contables, clasifiqué los costos mes a mes (por unidad de negocio, área, plataforma de pago y tipo, fijo o variable), armé presupuestos, avancé en un flujo de fondos y analicé los estados contables del hotel de 2018 a 2025.</p>
+
+    <h3>Qué quedó</h3>
+    <p>Los asientos de la unidad hotel digitalizados y un trabajo con la dirección sobre previsión de ventas, control de gastos y objetivos anuales con planes estructurados. La tarea siguió en manos de una persona de administración que conoce el hotel.</p>
+  </div>
+</dialog>
+
+<dialog class="popup" id="proyecto-lugareando" popover aria-labelledby="t-lugareando">
+  <div class="popup-cabecera">
+    <h2 id="t-lugareando">Proyecto Lugareando</h2>
+    <button type="button" class="cerrar" popovertarget="proyecto-lugareando" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <div class="popup-texto">
+    <p class="periodo">Creado en diciembre de 2024, dentro del trabajo con Hotel Italia</p>
+    <p>Agencia de turismo receptivo en Villa Carlos Paz para complementar al hotel. El objetivo principal era aumentar las ventas de estadías; el segundo, vender excursiones por las sierras de Córdoba.</p>
+
+    <h3>El plan de negocio</h3>
+    <p>Armamos el análisis del sector y la competencia (cinco fuerzas de Porter y FODA), el modelo de negocio, la propuesta de turismo alternativo, el público objetivo (familias, jubilados y parejas de más de 40 años), el plan operativo y la estrategia de crecimiento.</p>
+
+    <h3>Cómo llegué a las agencias</h3>
+    <ol>
+      <li>Foco en Córdoba, Santa Fe y Buenos Aires.</li>
+      <li>Base de más de 1.000 agencias de las ciudades más pobladas del país, con Google Maps y un scraper.</li>
+      <li>Clasificación por tipo de agencia para definir prioridades.</li>
+      <li>Primer contacto con un mensaje preparado; sin respuesta, correo y llamado, y un nuevo intento una o dos semanas después.</li>
+      <li>Planilla de seguimiento de cada contacto, con revisión semanal para ajustar el enfoque.</li>
+    </ol>
+
+    <h3>Estrategia de crecimiento</h3>
+    <p>Empezar con una red de agencias, transportistas y vendedores que ofrecieran plazas del hotel; después sumar excursiones y venta directa por canales propios, y más adelante turismo emisivo.</p>
+
+    <h3>En qué estado quedó</h3>
+    <p>El diseño del negocio y la habilitación quedaron terminados, y la red de contactos con agencias, iniciada.</p>
+  </div>
+</dialog>
+
+<dialog class="popup" id="job-valork" popover aria-labelledby="t-valork">
+  <div class="popup-cabecera">
+    <h2 id="t-valork">Valork: del proveedor a la exportación</h2>
+    <button type="button" class="cerrar" popovertarget="job-valork" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <div class="popup-texto">
+    <p class="periodo">Septiembre 2023 – Julio 2024</p>
+    <p>Fui el partner de Valork en Argentina. Analizaba proveedores, empresas de empaque de ajo y cebolla, para la venta en los mercados mayoristas de frutas de San Pablo y Río de Janeiro.</p>
+    <p>También ejecutaba la operación: controlaba la documentación de exportación y, en cada operación, analizaba el proveedor de logística internacional.</p>
+    <p>Además, organicé administrativamente la empresa y armé un registro y un método formal para la operación argentina.</p>
+  </div>
+</dialog>
+
+<dialog class="popup" id="job-vinos" popover aria-labelledby="t-vinos">
+  <div class="popup-cabecera">
+    <h2 id="t-vinos">Venta mayorista de vino de Mendoza</h2>
+    <button type="button" class="cerrar" popovertarget="job-vinos" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <div class="popup-texto">
+    <p class="periodo">2022 – 2023</p>
+    <p>Un proyecto independiente en el que trabajé como vendedor representante de una sola bodega, no con un mix de productos.</p>
+    <p>La venta era mayorista y desarrollé para eso una cartera de vinotecas en Córdoba.</p>
+  </div>
+</dialog>
+
+<dialog class="popup" id="job-hyflon" popover aria-labelledby="t-hyflon">
+  <div class="popup-cabecera">
+    <h2 id="t-hyflon">Hyflon: ventas técnicas y mantenimiento</h2>
+    <button type="button" class="cerrar" popovertarget="job-hyflon" popovertargetaction="hide" autofocus>Cerrar</button>
+  </div>
+  <div class="popup-texto">
+    <p class="periodo">Enero 2021 – Octubre 2021</p>
+    <p>Hacía ventas técnicas y asesoramiento de mantenimiento. Ayudábamos a empresas, principalmente del sector alimenticio, a mejorar la eficiencia de su trabajo.</p>
+    <p>Las acompañábamos con productos como centrales de lubricación y les ofrecíamos una app para mejorar la toma de datos en las rutinas de mantenimiento.</p>
+    <p>También asesorábamos para aplicar y mejorar indicadores de mantenimiento.</p>
+  </div>
+</dialog>
 </body>
 </html>

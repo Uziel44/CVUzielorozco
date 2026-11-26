@@ -85,20 +85,18 @@ h1 { color: var(--papel); font-size: 1.75rem; font-weight: 700; font-stretch: 11
 .identidad ul, .datos ul { padding: 0; list-style: none; }
 .identidad li + li, .datos li + li { margin-top: .4rem; }
 .whatsapp { margin-left: .6rem; font-size: .8125rem; }
-.boton {
-  width: 100%;
+.identidad .boton {
+  display: block;
   margin-top: 1.25rem;
   padding: .8rem 1rem;
-  border: 0;
   border-radius: 6px;
   background: var(--celeste);
   color: var(--marino);
-  font: 600 .9375rem var(--titulos);
-  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
 }
-.boton:hover { background: var(--papel); }
-.ayuda { margin-top: .4rem; font-size: .8125rem; }
-html:not(.js) .boton, html:not(.js) .ayuda { display: none; }
+.identidad .boton:hover { background: var(--papel); }
 
 .datos { padding-bottom: 2rem; }
 .idiomas li { display: flex; justify-content: space-between; gap: 1rem; }
@@ -189,7 +187,7 @@ main section > p + p, .ciclo + p { margin-top: .8rem; }
 .puesto {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-areas: "titulo" "fecha" "detalle";
+  grid-template-areas: "titulo" "fecha" "detalle" "mas";
   align-content: start;
   gap: .35rem 1.5rem;
   padding-block: 1.4rem;
@@ -209,16 +207,39 @@ h3 { font-size: 1.125rem; font-weight: 650; line-height: 1.3; }
 .breve p:last-child { grid-area: detalle; }
 
 @container (min-width: 600px) {
-  .puesto { grid-template-columns: 8.5rem minmax(0, 1fr); grid-template-areas: "fecha titulo" "fecha detalle"; grid-template-rows: auto 1fr; }
+  .puesto { grid-template-columns: 8.5rem minmax(0, 1fr); grid-template-areas: "fecha titulo" "fecha detalle" "fecha mas"; grid-template-rows: auto auto 1fr; }
   .breve { grid-template-areas: "fecha detalle"; grid-template-rows: auto; }
 }
 
-/* 8 · Impresión / Guardar como PDF: una hoja A4 */
+/* Popup con el listado de webs. No darle "display" a .popup: lo mostraría estando cerrado. */
+.enlace { padding: 0; border: 0; background: none; color: var(--azul); font: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
+.enlace:hover { text-decoration-thickness: 2px; }
+.popup { width: 80vw; height: 80vh; height: 80dvh; max-width: none; max-height: none; padding: 0; border: 0; border-radius: 8px; overflow: auto; background: var(--papel); color: var(--tinta); box-shadow: 0 1.5rem 4rem rgb(27 42 71 / .35); }
+.popup::backdrop { background: rgb(27 42 71 / .65); }
+body:has(.popup:popover-open) { overflow: hidden; }
+.popup-cabecera { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 1.25rem; background: var(--marino); color: var(--papel); }
+.popup h2 { font-size: 1.125rem; font-weight: 600; line-height: 1.3; }
+.cerrar { flex: none; padding: .45rem .8rem; border: 0; border-radius: 6px; background: var(--celeste); color: var(--marino); font: 600 .875rem var(--titulos); cursor: pointer; }
+.cerrar:hover { background: var(--papel); }
+.popup > ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr)); align-content: start; column-gap: 1.5rem; padding: .4rem 1.25rem 1.1rem; list-style: none; }
+.popup > ul li { padding-block: .65rem; border-bottom: 1px solid var(--niebla); color: var(--gris); font: 400 .875rem/1.4 var(--titulos); }
+.popup > ul li a { display: block; font-size: 1rem; font-weight: 600; }
+.mas { grid-area: mas; justify-self: start; margin-top: .35rem; font: 600 .9375rem var(--titulos); }
+/* El popup es ancho; el texto se limita a una columna cómoda de leer, centrada */
+.popup-texto { box-sizing: content-box; max-width: 72ch; margin-inline: auto; padding: 1.25rem 1.25rem 2rem; }
+@media screen and (min-width: 860px) { .popup-texto { font-size: 1.125rem; padding-block: 2rem 2.5rem; } }
+.popup-texto p + p { margin-top: .8rem; }
+.popup-texto h3 { margin: 1.1rem 0 .3rem; color: var(--marino); font-size: 1rem; }
+.popup-texto ol { padding-left: 1.25rem; }
+.popup-texto li + li { margin-top: .3rem; }
+.popup-texto .periodo { color: var(--azul); font: 600 .875rem var(--titulos); }
+
+/* 8 · Impresión desde el navegador (Ctrl+P): una hoja A4 */
 @page { size: A4; margin: 0; }
 @media print {
   html { font-size: 10.3px; }
   body { background: var(--papel); line-height: 1.28; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .saltar, .boton, .ayuda, .whatsapp { display: none !important; }
+  .saltar, .boton, .whatsapp, .enlace, .popup { display: none !important; }
   .hoja { grid-template-columns: 58mm minmax(0, 1fr); max-width: none; min-height: 296mm; }
   .identidad { display: block; padding: 7mm 5mm 0; }
   .datos { padding: 0 5mm 5mm; }
